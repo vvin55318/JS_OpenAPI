@@ -63,26 +63,38 @@
           var tot;
           var ava;
           var print;
+
+          // console.log(data)
+
           //將ajax取得的資料印出來，如果站點有新增需要更改for迴圈數量，如果站點減少需要找出站點編號做continue
           for (i = 0; i < 404; i++) {
             // 1~9
             if (i < 9) {
               dd = "000" + (i + 1);
 
-              // 10~99
-            } else if (i < 99) {
+              // 10~14
+            } else if (i < 14) {
               dd = "00" + (i + 1);
             }
 
-            // >100
+            //沒有15
+            else if (i == 14) continue;
+
+            //16~99
+            else if (i < 99) {
+              dd = "00" + (i + 1);
+            }
+
+            // 100~159
             else if (i < 159) {
               dd = "0" + (i + 1);
             }
+            
             //沒有160
             else if (i == 159) {
               continue;
             }
-            //沒有197
+            //161~197
             else if (i < 196) {
               dd = "0" + (i + 1);
             }
